@@ -1,2 +1,2 @@
 # KhiaoticProjectManagementSystem
-A project owners mangement system  to view and manage the departments, roles, and employees;  so that can organize and plan my production
+A animation project production  system  to view and manage the departments, roles, and employees;so that great content can be efficiently pipe-lined. 
