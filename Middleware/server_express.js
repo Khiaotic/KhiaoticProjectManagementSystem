@@ -27,11 +27,21 @@ const db = mysql.createConnection (
     console.log ('Connected to the pipeline_db khi!')
 );
 
-//query database
-// db.query('SELECT * FROM departments', function (err, results)
-// {console.log(results);
-// if(err) console.log(err)}
-// );
+/////////////////////////////////////BREAK///////////////////////////////////////////////////
+
+
+async function addDepartment(){
+    var availableDepartments = await db.promise().query(`SELECT id AS value, name AS name FROM departments`)
+    availableDepartments = availableDepartments[0]
+    console.log(availableDepartments)
+    var data = await inquirer.prompt(questions.addDepartment(availableDepartments))
+    console.log(data)
+}
+
+
+addDepartment()
+
+/////////////////////////////////////BREAK///////////////////////////////////////////////////
 
 async function addRole(){
     var availableDepartments = await db.promise().query(`SELECT id AS value, name AS name FROM departments`)
@@ -43,6 +53,27 @@ async function addRole(){
 
 
 addRole()
+
+
+/////////////////////////////////////BREAK///////////////////////////////////////////////////
+
+
+async function addEmployee(){
+    var availableRoles = await db.promise().query(`SELECT id AS value, name AS title, role_salary AS value FROM roles`)
+    availableRoles = availableRoles[0]
+    console.log(availableRoles)
+    var data = await inquirer.prompt(questions.addEmployee(availableRoles))
+    console.log(data)
+}
+
+
+addEmployee()
+
+
+
+
+
+
 //default response for ANY OTHER request
 // app.use((req,res)=> {res.status(404).end();});
 

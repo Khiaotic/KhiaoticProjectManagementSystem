@@ -12,11 +12,11 @@ VALUES ('Coordinator', 50000, 1),
     ('Pre-Producer', 70000, 3),
     ('Productionist', 550000, 4),
     ('Post-Producer', 70000, 5),
-    ('Distrbutor Guy', 90000, 6);
+    ('Distrbutor', 90000, 6);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES ('Khi', 'Warner', 1, NULL),
-('Bhi', 'thomas', 1, NULL),
+('Bhi', 'Qarner', 1, NULL),
 ('Chi', 'Garner', 2, NULL),
 ('Ghi', 'Farner', 3, 2),
 ('Lhi', 'Darner', 4, NULL),
