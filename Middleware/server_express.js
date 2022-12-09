@@ -2,7 +2,8 @@
 // const express = require('express');
 const inquirer = require('inquirer');
 const mysql= require('mysql2');
-const questions = require('./questions')
+const questions = require('./questions');
+require('dotenv').config();
 
 // const PORT = process.env.PORT || 8080;
 // const app = express();
@@ -19,7 +20,7 @@ const db = mysql.createConnection (
         //mysql username
         user: 'root',
         //mysql password
-        password: 'v3r1F1cat10n.',
+        password: process.env.DB_PASSWORD,
         database: 'animationpipeline_db',
 
     },
@@ -58,26 +59,16 @@ addRole()
 /////////////////////////////////////BREAK///////////////////////////////////////////////////
 
 
-async function addEmployee(){
-    var availableRoles = await db.promise().query(`SELECT id AS value, name AS title, role_salary AS value FROM roles`)
-    availableRoles = availableRoles[0]
-    console.log(availableRoles)
-    var data = await inquirer.prompt(questions.addEmployee(availableRoles))
-    console.log(data)
-}
+// async function addEmployee(){
+//     var availableRoles = await db.promise().query(`SELECT id AS value, name AS title, role_salary AS value FROM roles`)
+//     availableRoles = availableRoles[0]
+//     console.log(availableRoles)
+//     var data = await inquirer.prompt(questions.addEmployee(availableRoles))
+//     console.log(data)
+// }
 
 
-addEmployee()
+// addEmployee()
 
 
-
-
-
-
-//default response for ANY OTHER request
-// app.use((req,res)=> {res.status(404).end();});
-
-// app.listen(PORT, () => {
-//     console.log(`Server running on port ${PORT}`);
-// });
 
