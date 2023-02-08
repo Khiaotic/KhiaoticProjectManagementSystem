@@ -44,8 +44,14 @@ const questions = {
         },
         {
           type: "list",
-          name: "department",
+          name: "role_id",
           message: "What is the employee's job title",
+          choices: optionsArr,
+        },
+        {
+          type: "list",
+          name: "manager_id",
+          message: "What is the employee's manager ID",
           choices: optionsArr,
         }
     ];

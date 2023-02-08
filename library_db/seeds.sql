@@ -15,7 +15,7 @@ VALUES ('Coordinator', 50000, 1),
     ('Distrbutor', 90000, 6);
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
-VALUES ('Khi', 'Warner', 1, NULL),
+VALUES ('Zhi', 'Karner', 1, NULL),
 ('Bhi', 'Qarner', 1, NULL),
 ('Chi', 'Garner', 2, NULL),
 ('Ghi', 'Farner', 3, 2),
