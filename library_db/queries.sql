@@ -17,4 +17,4 @@ INSERT INTO industry_roles (title, role_salary, department_id) VALUES ('Animator
 
 
 -- ////add employeeeeeeeeee
-NSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Mhi', 'Marner', 7, 1);
+INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Mhi', 'Marner', 7, 1);

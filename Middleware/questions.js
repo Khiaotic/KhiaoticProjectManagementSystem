@@ -15,7 +15,14 @@ const questions = {
         type: "list",
         name: "department",
         message: "What will be the department_id?",
-        choices: optionsArr,
+        choices: [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
       },
     ];
   },

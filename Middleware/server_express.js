@@ -46,6 +46,8 @@ function controller() {
             return addDepartment()
     }
 })
+////add a function that sends client back to inquirer.prompt, yes or no to want to continue
+.then 
 }
 
 /////////////////////////////////////BREAK///////////////////////////////////////////////////
@@ -69,7 +71,7 @@ async function addDepartment() {
 async function addRole() {
   var availableDepartments = await db
     .promise()
-    .query(`SELECT id AS value, name AS name FROM departments`);
+    .query(`SELECT id AS value, title AS name, role_salary AS value FROM industry_roles`);
   availableDepartments = availableDepartments[0];
   console.log(availableDepartments);
   var data = await inquirer.prompt(questions.addRole(availableDepartments));
@@ -84,12 +86,13 @@ async function addEmployee() {
   var availableRoles = await db
     .promise()
     .query(
-      `SELECT id AS value, name AS title, role_salary AS value FROM roles`
+      `SELECT id AS value, title AS name, role_salary AS value FROM industry_roles`
     );
   availableRoles = availableRoles[0];
   console.log(availableRoles);
+//////HELP query not defined?/////////////
   var data = query(
-    `SELECT id AS value, name AS title, role_salary AS value FROM roles`
+    `SELECT id AS value, title AS name, role_salary AS value FROM industry_roles`
   ).prompt(questions.addEmployee(availableRoles));
   console.log(data);
 }
