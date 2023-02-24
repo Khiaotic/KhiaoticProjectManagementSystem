@@ -8,8 +8,9 @@ This application is covered by the (https://img.shields.io/badge/License-MIT-yel
 ![GitLicense](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 👀Preview and Demo
- 
-Link to Demo: 
+ ![projectmasnager](https://user-images.githubusercontent.com/112679225/221071350-545f2d6f-2c27-43d5-936a-215f2af2264c.jpg)
+
+Link to Demo: https://clipchamp.com/watch/RdSeHTKUyCx
 
 
 ## 📋Table of Contents
