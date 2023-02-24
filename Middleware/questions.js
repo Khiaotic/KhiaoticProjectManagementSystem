@@ -1,27 +1,34 @@
 const questions = {
-  addRole: function (optionsArr) {
+  addRole: function () {
     return [
       {
         type: "input",
         name: "title",
-        message: "What will be the new job title?",
+        message: "What will be the employee role?",
       },
       {
         type: "input",
         name: "salary",
-        message: "What will be the new job salary?",
+        message: "What will be the employee salary?",
       },
       {
         type: "list",
         name: "department",
         message: "What will be the department_id?",
-        choices: optionsArr,
+        choices: [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
       },
     ];
   },
   /////////////////////////////////////////////////////////
   
-  addDepartment: function (res) { 
+  addDepartment: function () { 
     return [
     {
       type: "input",
@@ -44,9 +51,26 @@ const questions = {
         },
         {
           type: "list",
-          name: "department",
+          name: "role_id",
           message: "What is the employee's job title",
-          choices: optionsArr,
+          choices: [
+            'Coordinator',
+            'Pre-Producer',
+            'Productionist',
+            'Post-Producer',
+            'Distrbutor'
+
+          ],
+        },
+        {
+          type: "list",
+          name: "manager_id",
+          message: "What is the employee's manager ID",
+          choices: [
+            1,
+            2,
+            3
+          ],
         }
     ];
 }
