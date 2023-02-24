@@ -46,8 +46,30 @@ function controller() {
             return addDepartment()
     }
 })
+.then (() => 
+  endController()
+)
 ////add a function that sends client back to inquirer.prompt, yes or no to want to continue
-.then 
+
+}
+function endController () {
+return inquirer.prompt([
+  {
+    name: "end",
+    message: "Would you like to continue?",
+    type: "confirm"
+   
+  },
+
+])
+.then (({end}) => {
+if(end) {
+  return controller()
+} 
+ console.log('Welcome to the Team');
+
+}
+)
 }
 
 /////////////////////////////////////BREAK///////////////////////////////////////////////////
@@ -91,9 +113,7 @@ async function addEmployee() {
   availableRoles = availableRoles[0];
   console.log(availableRoles);
 //////HELP query not defined?/////////////
-  var data = query(
-    `SELECT id AS value, title AS name, role_salary AS value FROM industry_roles`
-  ).prompt(questions.addEmployee(availableRoles));
+  var data = await inquirer.prompt(questions.addEmployee(availableRoles));
   console.log(data);
 }
 
