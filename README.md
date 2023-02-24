@@ -24,12 +24,14 @@ Link to Demo:
 
 
 ## 💢📃Installation
-To clone and use this application, you'll need Git and Node.js (npm equipped) installed on your computer
+To clone and use this application, you'll need Git and Node.js (npm equipped) and MYSQL installed on your computer
 
 
 ## 🧰Usage
+npm i
 SOURCE schema.sql
 SOURCE seeds.sql
+node server_express.js
 
 ## 🏠Contributors
 Feel free to submit updates for review and acceptance
